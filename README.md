@@ -35,7 +35,7 @@ import { WebComponent, register } from '@webcomp/core';
 
 ### 3. Create your component
 
-```js
+```jsx
 class SuperHeader extends WebComponent {
   render(props) {
     return (
