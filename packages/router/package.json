@@ -1,6 +1,6 @@
 {
   "name": "@webcomp/router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "WebComp Router",
   "repository": "https://github.com/webcomp/webcomp",
   "author": "Max Rovensky <hey@fivepointseven.com> (https://fivepointseven.com)",
