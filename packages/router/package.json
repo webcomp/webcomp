@@ -2,8 +2,8 @@
   "name": "@webcomp/router",
   "version": "1.0.0",
   "description": "WebComp Router",
-  "author": "Max Rovensky <hey@fivepointseven.com>",
-  "homepage": "",
+  "repository": "https://github.com/webcomp/webcomp",
+  "author": "Max Rovensky <hey@fivepointseven.com> (https://fivepointseven.com)",
   "license": "MIT",
   "main": "lib/index.js",
   "directories": {

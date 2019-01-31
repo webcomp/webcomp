@@ -5,6 +5,8 @@
     "build": "lerna run build",
     "precommit": "lint-staged"
   },
+  "repository": "https://github.com/webcomp/webcomp",
+  "author": "Max Rovensky <hey@fivepointseven.com> (https://fivepointseven.com)",
   "lint-staged": {
     "*.js": [
       "prettier-eslint --write",
