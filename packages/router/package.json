@@ -1,0 +1,29 @@
+{
+  "name": "@webcomp/router",
+  "version": "1.0.0",
+  "description": "WebComp Router",
+  "author": "Max Rovensky <hey@fivepointseven.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@webcomp/core": "latest",
+    "invariant": "^2.2.4",
+    "path-to-regexp": "^3.0.0",
+    "preact": "^8.4.2"
+  }
+}
