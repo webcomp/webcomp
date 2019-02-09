@@ -9,8 +9,8 @@ function extend(obj, props) {
 
 let WC_CONTEXT = {}
 
-async function setContext(name, nextValue) {
-  WC_CONTEXT = extend(extend({}, WC_CONTEXT), { [name]: await nextValue })
+function setContext(name, nextValue) {
+  WC_CONTEXT = extend(extend({}, WC_CONTEXT), { [name]: nextValue })
 
   document.dispatchEvent(new CustomEvent('wc:contextUpdate', { detail: WC_CONTEXT }))
 }
@@ -19,12 +19,12 @@ export default function withContext(name, initialValue = null) {
   return function withNamedContext(Comp) {
     let initialContext
 
-    if (WC_CONTEXT[name]) {
-      initialContext = WC_CONTEXT[name]
+    if (initialValue) {
+      initialContext = initialValue
     } else if (typeof Comp.getInitialContext === 'function') {
       initialContext = Comp.getInitialContext()
-    } else {
-      initialContext = initialValue
+    } else if (typeof WC_CONTEXT[name] !== 'undefined' && WC_CONTEXT[name] !== null) {
+      initialContext = WC_CONTEXT[name]
     }
 
     setContext(name, initialContext)
